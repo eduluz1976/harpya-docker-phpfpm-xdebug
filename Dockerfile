@@ -5,6 +5,8 @@ WORKDIR /srv/app
 COPY  run_fpm.sh /root
 COPY  xdebug-2.6.1.tgz /root
 
+COPY xdebug.ini /usr/local/etc/php/conf.d
+
 RUN echo "deb-src http://ppa.launchpad.net/chris-lea/libsodium/ubuntu precise main" >> /etc/apt/sources.list \
     && echo "deb http://ppa.launchpad.net/chris-lea/libsodium/ubuntu precise main" >> /etc/apt/sources.list \
     &&  apt-get update \
