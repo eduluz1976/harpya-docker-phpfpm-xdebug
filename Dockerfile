@@ -16,7 +16,7 @@ COPY xdebug.ini /usr/local/etc/php/conf.d
 
 
 RUN  yum -y install epel-release
-RUN  yum -y install http://rpms.remirepo.net/enterprise/remi-release-7.rpm
+RUN  yum -y --nobest install http://rpms.remirepo.net/enterprise/remi-release-7.rpm
 RUN  yum-config-manager --enable remi-php72
 
 
